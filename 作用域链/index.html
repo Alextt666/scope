@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //作用域链      :   内部函数访问外部函数的变量， 采用的是链式查找的方式来决定取哪个值   这种结构我们称为作用域链；  就近原则；
+        var num = 10;
+        function fn(){
+            var num = 20;
+            function fun(){
+                console.log(num);//这里输出的是哪个num？ 会到上一级去寻找num 如果有 则输出 没有则再上一级取寻找 这种链式的查找的结构就是作用域链；
+            }
+            fun();
+        }
+        fn();
+    </script>
+</body>
+</html>

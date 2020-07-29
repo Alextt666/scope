@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //变量提升练习 
+
+ /*      f1();
+        console.log(a);
+        console.log(b);
+        console.log(c); 
+
+        function f1(){
+            var a=b=c=9;
+            console.log(a);
+            console.log(b);
+            console.log(c);
+        };                                      */
+          
+
+        //相当于执行 以下代码
+
+        function f1(){
+            var a=b=c=9;  //这里相当于是 var a=9 ; b=9 ; c=9      重点注意!!!!!     所以 b 和 c是全局变量；
+
+                          //集体声明的方式是 var a=9,b=9,c=9;
+            console.log(a);//9
+            console.log(b);//9
+            console.log(c);//9
+        };                   //函数提升
+
+        f1();
+        console.log(b);//9
+        console.log(c);//9
+        console.log(a);// 报错 全局变量里没有 声明a 更没有赋值；
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 练习1    结果是多少
+
+        /*  function fn(){
+             var num = 10;
+             function fn1(){
+                 var num = 0 ; 
+                 console.log(num);   //站在目标出发  一层一层向外寻找； 就近原则
+             }
+             fn1();
+         }
+         var num =20;
+         fn();
+  */
+        //练习2     结果是多少
+        var a = 1;
+        function fn1() {
+            var a = 2;
+            var b = '22';
+            fn2();
+            function fn2() {
+                var a = 3;
+                fn3();
+                function fn3() {
+                    var a = 4;
+                    console.log(a);//a 的值？ 4;
+                    console.log(b);//b  的值？  '22';
+                }
+            }
+        }
+        fn1();
+    </script>
+</body>
+
+</html>
